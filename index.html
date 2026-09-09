@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Youdaimonia — Reclaim Your Mind, Body & Spirit</title>
+  <meta name="description" content="Landing page for Youdaimonia to reverse the effects of digital dementia and restore agency." />
+  <meta property="og:title" content="Youdaimonia — Reclaim Your Mind, Body & Spirit" />
+  <meta property="og:description" content="Landing page for Youdaimonia to reverse the effects of digital dementia and restore agency." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              900: '#312e81',
+              primary: '#4522a0',
+              primaryHover: '#371987',
+              primaryLight: '#ede8f9',
+              accent: '#08d656',
+              accentHover: '#06b547',
+              accentLight: '#e6fbf0',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            display: ['"Space Grotesk"', '"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @media print {
+      body {
+        background-color: white !important;
+        color: black !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print-only {
+        display: block !important;
+      }
+      .page-break {
+        page-break-after: always;
+      }
+      .survey-card {
+        border: 1px solid #d1d5db !important;
+        box-shadow: none !important;
+        break-inside: avoid;
+        margin-bottom: 1rem;
+      }
+    }
+    .focus-ring {
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+      box-shadow: 0 0 0 3px rgba(69, 34, 160, 0.25);
+    }
+  </style>
+</head>
+<body class="bg-white text-black font-sans antialiased min-h-screen flex flex-col selection:bg-[#4522a0] selection:text-white">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-[#4522a0] text-white py-2 px-4 text-center text-xs sm:text-sm font-medium tracking-wide">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-2">
+      <span class="inline-block w-2 h-2 rounded-full bg-[#08d656] animate-pulse"></span>
+      <span>Community Survey Open: Explore the interactive experience & attend our upcoming event.</span>
+      <a href="#survey" class="underline underline-offset-2 hover:text-[#08d656] transition-colors font-semibold ml-1">Take Survey &rarr;</a>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[5.5rem] sm:min-h-[6.5rem] md:min-h-[7.5rem] py-3 flex items-center justify-between">
+      <!-- Logo enlarged with text removed as requested -->
+      <a href="#" class="flex items-center group focus:outline-none focus:ring-2 focus:ring-[#4522a0] rounded-lg p-1" aria-label="Youdaimonia Home">
+        <img 
+          src="https://lh3.googleusercontent.com/d/1PEB_VwtVLFQFcbTPyl-e76Nf2xZulUJM" 
+          alt="Youdaimonia Logo"
+          class="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+          referrerpolicy="no-referrer"
+        />
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-black">
+        <a href="#who-we-are" class="hover:text-[#4522a0] transition-colors py-1">Who We Are</a>
+        <a href="#mission" class="hover:text-[#4522a0] transition-colors py-1">Mission Statement</a>
+        <a href="#signup" class="hover:text-[#4522a0] transition-colors py-1">Join Community</a>
+        <a href="#survey" class="hover:text-[#4522a0] transition-colors py-1">Take The Survey</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a 
+          href="#survey" 
+          class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-bold text-white bg-[#4522a0] hover:bg-[#371987] transition-all shadow-sm hover:shadow active:scale-95"
+        >
+          Take The Survey
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button 
+        type="button" 
+        id="mobile-menu-btn"
+        class="md:hidden p-2 rounded-lg text-black hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#4522a0]"
+        aria-label="Toggle Navigation Menu"
+        aria-expanded="false"
+      >
+        <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-gray-100 bg-white px-4 pt-3 pb-6 space-y-3">
+      <a href="#who-we-are" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-black hover:bg-gray-50 hover:text-[#4522a0]">Who We Are</a>
+      <a href="#mission" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-black hover:bg-gray-50 hover:text-[#4522a0]">Mission Statement</a>
+      <a href="#signup" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-black hover:bg-gray-50 hover:text-[#4522a0]">Join Community</a>
+      <a href="#survey" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-black hover:bg-gray-50 hover:text-[#4522a0]">Take The Survey</a>
+      <div class="pt-2">
+        <a href="#survey" class="mobile-nav-link block text-center w-full px-5 py-3 rounded-full text-base font-bold text-white bg-[#4522a0] hover:bg-[#371987]">
+          Take The Survey
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- HERO SECTION -->
+    <section class="relative bg-gradient-to-b from-gray-50 via-white to-white pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Hero Text Column -->
+          <div class="lg:col-span-7 space-y-6 text-left">
+            <!-- Pill Tag with Accent Color #08d656 -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#e6fbf0] border border-[#08d656]/30 text-xs sm:text-sm font-semibold text-black">
+              <span class="w-2 h-2 rounded-full bg-[#08d656]"></span>
+              <span>Reversing Digital Dementia &amp; Reclaiming Agency</span>
+            </div>
+
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black tracking-tight leading-[1.15]">
+              Recalibrate your life toward a <span class="text-[#4522a0] underline decoration-[#08d656] decoration-4 underline-offset-8">rich, meaningful</span> experience.
+            </h1>
+
+            <p class="text-lg sm:text-xl text-black leading-relaxed max-w-2xl font-normal">
+              Empowering individuals and families with neuroscience-backed insights to dismantle digital addiction, protect brain chemistry, and practice true Eudaimonia.
+            </p>
+
+            <!-- Quick Action Links -->
+            <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              <a 
+                href="#signup" 
+                class="inline-flex items-center justify-center px-7 py-3.5 rounded-full text-base font-bold text-white bg-[#4522a0] hover:bg-[#371987] transition-all shadow-md hover:shadow-lg active:scale-95 text-center"
+              >
+                Join the Community
+              </a>
+              <a 
+                href="#survey" 
+                class="inline-flex items-center justify-center px-7 py-3.5 rounded-full text-base font-bold text-black bg-white hover:bg-gray-50 border-2 border-black transition-all text-center group"
+              >
+                <span>Take The Survey</span>
+                <span class="ml-2 text-[#08d656] group-hover:translate-x-1 transition-transform">&rarr;</span>
+              </a>
+            </div>
+
+            <!-- Key pillars quick summary -->
+            <div class="pt-6 grid grid-cols-3 gap-4 border-t border-gray-100 max-w-xl">
+              <div>
+                <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Focus</p>
+                <p class="text-sm font-bold text-black mt-1">Brain Chemistry</p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Goal</p>
+                <p class="text-sm font-bold text-black mt-1">Homeostasis</p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Method</p>
+                <p class="text-sm font-bold text-black mt-1">Tactile &amp; Science</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Image Column (featuring group activities photo) -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto max-w-md lg:max-w-none">
+              <!-- Decorative Accent Ring with Primary and Accent Colors -->
+              <div class="absolute -top-4 -left-4 w-72 h-72 bg-[#4522a0]/10 rounded-3xl filter blur-xl -z-10"></div>
+              <div class="absolute -bottom-4 -right-4 w-72 h-72 bg-[#08d656]/15 rounded-3xl filter blur-xl -z-10"></div>
+              
+              <div class="overflow-hidden rounded-2xl border border-gray-200 shadow-xl bg-white p-2">
+                <img 
+                  src="https://lh3.googleusercontent.com/d/1tYi6sEoD0PSUIMarVrseo0WPKeJV-Cy7" 
+                  alt="group activities" 
+                  class="w-full h-80 sm:h-96 object-cover rounded-xl transition-transform duration-500 hover:scale-105"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+
+              <!-- Floating badge highlighting community engagement -->
+              <div class="absolute -bottom-5 -left-4 sm:left-4 bg-white border-2 border-[#4522a0] rounded-xl px-4 py-3 shadow-lg flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full bg-[#e6fbf0] flex items-center justify-center text-[#08d656] font-extrabold text-lg">
+                  ✓
+                </div>
+                <div>
+                  <p class="text-xs font-bold text-black">Interactive Community</p>
+                  <p class="text-xs text-gray-600">Tactile activities &amp; real connection</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: WHO WE ARE -->
+    <section id="who-we-are" class="py-20 bg-white border-t border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Image Column for Who We Are -->
+          <div class="lg:col-span-5 order-2 lg:order-1">
+            <div class="relative max-w-md mx-auto lg:max-w-none">
+              <div class="absolute -inset-2 bg-gradient-to-r from-[#4522a0]/15 to-[#08d656]/20 rounded-2xl filter blur-lg"></div>
+              <div class="relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-2 shadow-lg">
+                <img 
+                  src="https://lh3.googleusercontent.com/d/1FlHiz2yrMeW1w_aFntW8e1uw1n8BgJKB" 
+                  alt="Your Image Description" 
+                  class="w-full h-80 sm:h-96 object-cover rounded-xl transition-transform duration-500 hover:scale-105"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+              <!-- Accent detail card -->
+              <div class="mt-4 p-4 rounded-xl bg-gray-50 border border-gray-200 text-xs text-black">
+                <p class="font-bold text-[#4522a0] mb-1">Backed by Science Literature</p>
+                <p class="text-gray-700">Translating neuroscience research into actionable habits for modern human agency.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Column for Who We Are -->
+          <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-100 text-xs font-bold uppercase tracking-wider text-black">
+              About Us
+            </div>
+
+            <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-black tracking-tight">
+              Who We Are
+            </h2>
+
+            <!-- Exact required body text -->
+            <div class="space-y-4 text-base sm:text-lg text-black leading-relaxed">
+              <p>
+                A group of people who are learning more about how our brains function in order to take back the agency of ourselves and our family, in an effort to reverse the effects of digital dementia through allowing our digital addiction to effect our mind, body and spirit. We take full responsibility for who we are and why we need to change, and we also recognize that our attention has been monetized by corporations selling products that have been strategically designed to hack our mind and body's for capitalizing on profits at the expense of our mind, body and spirit. We strive to bring fact based information from the most recent studies, backed by science literature and professionals in various fields.
+              </p>
+            </div>
+
+            <!-- Bullet indicators for scannability -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+              <div class="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200">
+                <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#4522a0] text-white text-xs font-bold shrink-0">1</span>
+                <div>
+                  <h3 class="font-bold text-black text-sm">Understanding Brain Biology</h3>
+                  <p class="text-xs text-gray-600 mt-0.5">Demystifying neural dopamine pathways and screen saturation.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200">
+                <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#08d656] text-black text-xs font-bold shrink-0">2</span>
+                <div>
+                  <h3 class="font-bold text-black text-sm">Reclaiming Agency</h3>
+                  <p class="text-xs text-gray-600 mt-0.5">Taking proactive responsibility for ourselves and our families.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: MISSION STATEMENT -->
+    <section id="mission" class="py-20 bg-gray-50 border-t border-b border-gray-200">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center space-y-4 mb-10">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#4522a0] text-white text-xs font-bold uppercase tracking-wider">
+            Our Purpose
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-black tracking-tight">
+            Mission Statement
+          </h2>
+          <div class="w-16 h-1 bg-[#08d656] mx-auto rounded-full"></div>
+        </div>
+
+        <!-- Mission Statement Card with White Background and Subtle Border -->
+        <div class="bg-white rounded-2xl p-8 sm:p-12 border-2 border-gray-200 shadow-sm relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-2 h-full bg-[#4522a0]"></div>
+          
+          <blockquote class="text-lg sm:text-xl text-black leading-relaxed font-normal text-left sm:text-justify">
+            Our mission is to bring awareness to our community about the dangers of digital addiction by showing them the fundamentals of human biology and brain chemistry, and by providing a space that gives them an alternative to engaging in behavior that feeds into digital addiction. Through the propagation of knowledge, we will give back the physical and mental capacity to our community and facilitate a paradigm shift that will lead to the recalibration of our lives toward a more rich and meaningful experience through the practice and awareness of Eudimonia.
+          </blockquote>
+
+          <div class="mt-8 pt-6 border-t border-gray-100 flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-[#4522a0] text-[#08d656] flex items-center justify-center font-bold text-lg">
+                Y
+              </div>
+              <div>
+                <p class="font-bold text-black text-sm">The Youdaimonia Commitment</p>
+                <p class="text-xs text-gray-500">Human Biology &bull; Brain Chemistry &bull; Community</p>
+              </div>
+            </div>
+
+            <a href="#signup" class="inline-flex items-center text-sm font-bold text-[#4522a0] hover:text-[#371987]">
+              Join the movement &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: SIGN UP FIELD -->
+    <section id="signup" class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <div class="space-y-4 mb-8">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#e6fbf0] text-[#08d656] text-xs font-bold uppercase tracking-wider">
+            Stay Connected
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-black tracking-tight">
+            Join the Youdaimonia Community
+          </h2>
+          <p class="text-base sm:text-lg text-black max-w-xl mx-auto">
+            Submit your email to receive research updates, upcoming workshop announcements, and actionable guides on restoring mental agency.
+          </p>
+        </div>
+
+        <!-- Sign Up Card -->
+        <div class="bg-gray-50 p-6 sm:p-10 rounded-2xl border-2 border-gray-200 shadow-sm text-left">
+          
+          <form 
+            id="signup-form" 
+            action="https://script.google.com/macros/s/AKfycbz47F0BZYdxj_JM-KwTZ_UsERvbrrXSUdUAZSfbyT5-nOUHk5qpYjt5yVBs6cHEZlNh/exec" 
+            method="POST" 
+            target="google_sheet_target"
+            class="space-y-4" 
+            novalidate
+          >
+            <div>
+              <label for="email-input" class="block text-sm font-bold text-black mb-2">
+                Email Address
+              </label>
+              
+              <div class="flex flex-col sm:flex-row gap-3">
+                <input 
+                  type="email" 
+                  id="email-input" 
+                  name="email" 
+                  required
+                  placeholder="Enter your email address" 
+                  class="flex-grow px-4 py-3 rounded-xl border-2 border-gray-300 text-black placeholder-gray-400 bg-white focus:border-[#4522a0] focus:ring-2 focus:ring-[#4522a0]/20 focus:outline-none transition-all text-base"
+                />
+
+                <!-- Hidden survey_results input matching Google Sheet header -->
+                <input 
+                  type="text" 
+                  name="survey_results" 
+                  id="signup-survey-results" 
+                  value="Email Signup (Stay Connected)" 
+                  class="sr-only" 
+                  aria-hidden="true" 
+                  tabindex="-1"
+                />
+                
+                <button 
+                  type="submit" 
+                  id="signup-button"
+                  class="px-8 py-3 rounded-xl font-bold text-white bg-[#4522a0] hover:bg-[#371987] active:scale-95 transition-all text-base shadow-sm shrink-0 flex items-center justify-center gap-2"
+                >
+                  <span>Submit</span>
+                </button>
+              </div>
+
+              <!-- Message container specifically requested:
+                   "Note: once the email is submitted, a message should display just below the entry field that reads "Submitted"" -->
+              <div id="submission-feedback-area" class="mt-2 min-h-[28px] transition-all">
+                <p id="submitted-message" class="hidden text-base font-bold text-[#08d656] flex items-center gap-2">
+                  <svg class="w-5 h-5 text-[#08d656]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Submitted</span>
+                </p>
+                <p id="error-message" class="hidden text-sm font-medium text-red-600">
+                  Please enter a valid email address.
+                </p>
+              </div>
+
+            </div>
+          </form>
+
+          <p class="text-xs text-gray-500 mt-2">
+            We value your privacy. Your information is strictly used for Youdaimonia community updates and event invitations.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: TAKE THE SURVEY -->
+    <section id="survey" class="py-20 bg-gradient-to-b from-gray-50 to-white border-t border-gray-200">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <div class="bg-white rounded-3xl p-8 sm:p-14 border-2 border-[#4522a0] shadow-xl relative overflow-hidden">
+          <!-- Accent Corner Badge -->
+          <div class="absolute top-0 right-0 bg-[#08d656] text-black font-extrabold text-xs uppercase px-4 py-1.5 rounded-bl-xl tracking-wider">
+            Exclusive Access
+          </div>
+
+          <div class="space-y-6">
+            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-black tracking-tight">
+              Take The Survey
+            </h2>
+
+            <!-- Exact required body text:
+                 "Want to see if the Youdaimonia interactive experience is right for you? Complete the survey for a chance to attend an exclusive event with a treasure trove of actionable information, fun tactile oriented activities and opportunities to connect with the people in our community who are paving the way for a kick ass future!." -->
+            <p class="text-lg sm:text-xl text-black leading-relaxed font-normal max-w-3xl mx-auto">
+              Want to see if the Youdaimonia interactive experience is right for you? Complete the survey for a chance to attend an exclusive event with a treasure trove of actionable information, fun tactile oriented activities and opportunities to connect with the people in our community who are paving the way for a kick ass future!.
+            </p>
+
+            <!-- Link titled "Take The Survey" at the bottom of the body of text -->
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a 
+                href="#survey-modal" 
+                id="open-survey-btn"
+                class="inline-flex items-center justify-center px-8 py-4 rounded-full text-lg font-bold text-white bg-[#4522a0] hover:bg-[#371987] transition-all shadow-lg hover:shadow-xl active:scale-95 group"
+              >
+                <span>Take The Survey</span>
+                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Highlights summary -->
+            <div class="pt-8 border-t border-gray-100 grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+              <div class="flex items-start gap-3">
+                <span class="text-[#08d656] font-bold text-lg">&bull;</span>
+                <div>
+                  <h3 class="font-bold text-sm text-black">Actionable Data</h3>
+                  <p class="text-xs text-gray-600">Discover your baseline digital impact score.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-[#08d656] font-bold text-lg">&bull;</span>
+                <div>
+                  <h3 class="font-bold text-sm text-black">Tactile Activities</h3>
+                  <p class="text-xs text-gray-600">Hands-on alternatives to screen time habits.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-[#08d656] font-bold text-lg">&bull;</span>
+                <div>
+                  <h3 class="font-bold text-sm text-black">Community Access</h3>
+                  <p class="text-xs text-gray-600">Connect with leaders shaping healthier lifestyles.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SURVEY MODAL POP-UP WINDOW -->
+  <div id="survey-modal" class="fixed inset-0 z-50 hidden bg-slate-950/75 backdrop-blur-sm overflow-y-auto p-2 sm:p-4 md:p-6" role="dialog" aria-modal="true" aria-labelledby="survey-modal-title">
+    <div class="relative w-full max-w-4xl mx-auto my-3 sm:my-6 bg-slate-50 text-slate-800 rounded-3xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col font-sans antialiased">
+      
+      <!-- Top Navigation / Header -->
+      <header class="bg-white border-b border-slate-200 sticky top-0 z-30 shadow-sm no-print">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div class="flex items-center space-x-3 w-full sm:w-auto justify-between sm:justify-start">
+            <div class="flex items-center space-x-3">
+              <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold text-lg shadow-md shadow-indigo-200">
+                🧠
+              </div>
+              <div>
+                <h1 id="survey-modal-title" class="text-base sm:text-lg font-bold text-slate-900 leading-tight">Digital Addiction &amp; Brain Recovery</h1>
+                <p class="text-xs text-slate-500">Candidate Diagnostic &amp; Neurobiology Screening Survey</p>
+              </div>
+            </div>
+            <!-- Mobile close button -->
+            <button type="button" class="close-survey-action sm:hidden p-2 rounded-lg text-slate-400 hover:text-slate-800 hover:bg-slate-100" aria-label="Close survey">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
+            <button id="viewToggleBtn" type="button" onclick="toggleViewMode()" class="px-3.5 py-1.5 rounded-lg border border-slate-300 text-xs font-medium text-slate-700 hover:bg-slate-100 transition-colors flex items-center gap-1.5 shadow-sm">
+              <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+              </svg>
+              <span id="viewModeLabel">Show Printable Sheet</span>
+            </button>
+            <button type="button" onclick="window.print()" class="px-3.5 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-xs font-medium text-white transition-colors flex items-center gap-1.5 shadow-sm">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+              </svg>
+              Print / PDF
+            </button>
+            <!-- Desktop close button -->
+            <button type="button" id="close-survey-btn" class="close-survey-action hidden sm:inline-flex p-2 rounded-lg text-slate-400 hover:text-slate-800 hover:bg-slate-100 transition-colors ml-1" aria-label="Close survey">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Progress Bar (Interactive Mode) -->
+      <div id="progressBarContainer" class="w-full bg-slate-200 h-1.5 sticky top-[73px] z-20 no-print">
+        <div id="progressBar" class="bg-indigo-600 h-1.5 w-0 transition-all duration-300 ease-out"></div>
+      </div>
+
+      <div class="flex-grow max-w-4xl mx-auto w-full px-4 sm:px-6 py-8">
+        
+        <!-- Document Intro Header -->
+        <div class="mb-8 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+          <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-4 mb-4">
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-indigo-50 text-indigo-700 border border-indigo-100">
+              Target Audience: Adults (Ages 18+)
+            </span>
+            <span class="text-xs text-slate-500 font-mono">12 Clinical &amp; Neurobiological Screening Items</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">The Digital Addiction &amp; Brain Recovery Survey</h2>
+          <p class="mt-3 text-slate-600 leading-relaxed text-sm sm:text-base">
+            This screening survey is engineered to identify prime candidates for the interactive presentation on overcoming compulsive device habits. 
+            It evaluates three core predictive dimensions: <strong class="text-slate-800">Behavioral Learning Rate</strong>, <strong class="text-slate-800">Dopamine Tolerance for Discomfort/Boredom</strong>, and <strong class="text-slate-800">Emotional Awareness</strong>.
+          </p>
+
+          <div class="no-print mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <span>Completion Progress: <strong id="answeredCount" class="text-indigo-600">0</strong> of 12 Answered</span>
+            <button type="button" onclick="resetSurvey()" class="text-slate-400 hover:text-rose-600 transition-colors">Reset Answers</button>
+          </div>
+        </div>
+
+        <!-- Survey Form Form Body -->
+        <form 
+          id="surveyForm" 
+          action="https://script.google.com/macros/s/AKfycbz47F0BZYdxj_JM-KwTZ_UsERvbrrXSUdUAZSfbyT5-nOUHk5qpYjt5yVBs6cHEZlNh/exec" 
+          method="POST" 
+          target="google_sheet_target"
+          novalidate
+        >
+          
+          <!-- PART 1 -->
+          <section class="mb-10">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="h-8 w-8 rounded-lg bg-indigo-100 text-indigo-700 font-bold flex items-center justify-center text-sm">P1</span>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900">Part 1: Personal Inquiries &amp; Behavioral Habits</h3>
+                <p class="text-xs text-slate-500">Multiple Choice &bull; Gauging automatic motor loops and dopamine baseline</p>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <!-- Question 1 -->
+              <div class="survey-card bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm transition-all hover:border-slate-300" id="card-q1">
+                <div class="flex items-start justify-between gap-4">
+                  <h4 class="font-semibold text-slate-900 text-base leading-snug">
+                    1. When you find yourself standing in a long grocery checkout line with no phone in your hand, what is your most common reaction?
+                  </h4>
+                  <span class="text-[10px] font-mono text-slate-400 bg-slate-100 px-2 py-0.5 rounded">Refs: [1-8]</span>
+                </div>
+                <div class="mt-4 space-y-2.5">
+                  <label class="flex items-start p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors group">
+                    <input type="radio" name="q1" value="A" class="mt-1 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <div class="ml-3 text-sm">
+                      <span class="font-medium text-slate-800 group-hover:text-indigo-900">A)</span>
+                      <span class="text-slate-600 ml-1">I feel a low-grade, restless anxiety or irritability, and immediately reach for any screen.</span>
+                    </div>
+                  </label>
+                  <label class="flex items-start p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors group">
+                    <input type="radio" name="q1" value="B" class="mt-1 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <div class="ml-3 text-sm">
+                      <span class="font-medium text-slate-800 group-hover:text-indigo-900">B)</span>
+                      <span class="text-slate-600 ml-1">I enjoy the quiet moment to let my mind wander, think about life, and check in on my goals.</span>
+                    </div>
+                  </label>
+                  <label class="flex items-start p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors group">
+                    <input type="radio" name="q1" value="C" class="mt-1 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <div class="ml-3 text-sm">
+                      <span class="font-medium text-slate-800 group-hover:text-indigo-900">C)</span>
+                      <span class="text-slate-600 ml-1">I would genuinely prefer a mild, painful electric shock over just sitting there with my own thoughts.</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Question 2 -->
+              <div class="survey-card bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm transition-all hover:border-slate-300" id="card-q2">
+                <div class="flex items-start justify-between gap-4">
+                  <h4 class="font-semibold text-slate-900 text-base leading-snug">
+                    2. Have you ever noticed yourself closing an app on your phone, only to reflexively reopen the exact same app three seconds later?
+                  </h4>
+                  <span class="text-[10px] font-mono text-slate-400 bg-slate-100 px-2 py-0.5 rounded">Refs: [9-16]</span>
+                </div>
+                <div class="mt-4 space-y-2.5">
+                  <label class="flex items-start p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors group">
+                    <input type="radio" name="q2" value="A" class="mt-1 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <div class="ml-3 text-sm">
+                      <span class="font-medium text-slate-800 group-hover:text-indigo-900">A)</span>
+                      <span class="text-slate-600 ml-1">Yes, I do this automatically without even realizing my thumb is moving.</span>
+                    </div>
+                  </label>
+                  <label class="flex items-start p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors group">
+                    <input type="radio" name="q2" value="B" class="mt-1 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <div class="ml-3 text-sm">
+                      <span class="font-medium text-slate-800 group-hover:text-indigo-900">B)</span>
+                      <span class="text-slate-600 ml-1">Occasionally, mostly when I am particularly tired, hungry, or bored.</span>
+                    </div>
+                  </label>
+                  <label class="flex items-start p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors group">
+                    <input type="radio" name="q2" value="C" class="mt-1 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <div class="ml-3 text-sm">
+                      <span class="font-medium text-slate-800 group-hover:text-indigo-900">C)</span>
+                      <span class="text-slate-600 ml-1">No, I am always highly intentional and deliberate when I pick up my device.</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Question 3 -->
+              <div class="survey-card bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm transition-all hover:border-slate-300" id="card-q3">
+                <div class="flex items-start justify-between gap-4">
+                  <h4 class="font-semibold text-slate-900 text-base leading-snug">
+                    3. If a habit or behavior in your life consistently leaves you feeling anxious, empty, or guilty afterward, how many times does it usually take for you to actively change your behavior?
+                  </h4>
+                  <span class="text-[10px] font-mono text-slate-400 bg-slate-100 px-2 py-0.5 rounded">Refs: [17-19]</span>
+                </div>
+                <div class="mt-4 space-y-2.5">
+                  <label class="flex items-start p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors group">
+                    <input type="radio" name="q3" value="A" class="mt-1 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <div class="ml-3 text-sm">
+                      <span class="font-medium text-slate-800 group-hover:text-indigo-900">A)</span>
+                      <span class="text-slate-600 ml-1">Just 1 to 2 times—I pivot my behavior and learn extremely quickly.</span>
+                    </div>
+                  </label>
+                  <label class="flex items-start p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors group">
+                    <input type="radio" name="q3" value="B" class="mt-1 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <div class="ml-3 text-sm">
+                      <span class="font-medium text-slate-800 group-hover:text-indigo-900">B)</span>
+                      <span class="text-slate-600 ml-1">Somewhere between 5 and 15 times once I actively pay attention to how bad it makes me feel.</span>
+                    </div>
+                  </label>
+                  <label class="flex items-start p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors group">
+                    <input type="radio" name="q3" value="C" class="mt-1 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <div class="ml-3 text-sm">
+                      <span class="font-medium text-slate-800 group-hover:text-indigo-900">C)</span>
+                      <span class="text-slate-600 ml-1">Honestly, hundreds of times, or I just keep doing it despite the negative consequences.</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Question 4 -->
+              <div class="survey-card bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm transition-all hover:border-slate-300" id="card-q4">
+                <div class="flex items-start justify-between gap-4">
+                  <h4 class="font-semibold text-slate-900 text-base leading-snug">
+                    4. If your phone screen was permanently set to grayscale (black and white) with all non-human notifications completely silenced, how would you react?
+                  </h4>
+                  <span class="text-[10px] font-mono text-slate-400 bg-slate-100 px-2 py-0.5 rounded">Refs: [20-23]</span>
+                </div>
+                <div class="mt-4 space-y-2.5">
+                  <label class="flex items-start p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors group">
+                    <input type="radio" name="q4" value="A" class="mt-1 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <div class="ml-3 text-sm">
+                      <span class="font-medium text-slate-800 group-hover:text-indigo-900">A)</span>
+                      <span class="text-slate-600 ml-1">I would find the phone incredibly boring and naturally look at it far less.</span>
+                    </div>
+                  </label>
+                  <label class="flex items-start p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors group">
+                    <input type="radio" name="q4" value="B" class="mt-1 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <div class="ml-3 text-sm">
+                      <span class="font-medium text-slate-800 group-hover:text-indigo-900">B)</span>
+                      <span class="text-slate-600 ml-1">I would find it mildly annoying but would still scroll through it anyway.</span>
+                    </div>
+                  </label>
+                  <label class="flex items-start p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors group">
+                    <input type="radio" name="q4" value="C" class="mt-1 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <div class="ml-3 text-sm">
+                      <span class="font-medium text-slate-800 group-hover:text-indigo-900">C)</span>
+                      <span class="text-slate-600 ml-1">I would probably throw it out of a window or buy a newer, more colorful phone immediately.</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- PART 2 -->
+          <section class="mb-10">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="h-8 w-8 rounded-lg bg-indigo-100 text-indigo-700 font-bold flex items-center justify-center text-sm">P2</span>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900">Part 2: Personal Assessment</h3>
+                <p class="text-xs text-slate-500">True or False &bull; Measuring morning neurochemistry, anxiety, and flow state</p>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <!-- Question 5 -->
+              <div class="survey-card bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm transition-all hover:border-slate-300" id="card-q5">
+                <div class="flex items-start justify-between gap-4">
+                  <h4 class="font-semibold text-slate-900 text-base leading-snug">
+                    5. The very first thing I do within 15 minutes of waking up is unlock my phone to check notifications, social media, or work emails.
+                  </h4>
+                  <span class="text-[10px] font-mono text-slate-400 bg-slate-100 px-2 py-0.5 rounded">Refs: [24, 25]</span>
+                </div>
+                <div class="mt-4 grid grid-cols-2 gap-3">
+                  <label class="flex items-center justify-center p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors">
+                    <input type="radio" name="q5" value="True" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <span class="ml-2.5 text-sm font-semibold text-slate-700">True</span>
+                  </label>
+                  <label class="flex items-center justify-center p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors">
+                    <input type="radio" name="q5" value="False" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <span class="ml-2.5 text-sm font-semibold text-slate-700">False</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Question 6 -->
+              <div class="survey-card bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm transition-all hover:border-slate-300" id="card-q6">
+                <div class="flex items-start justify-between gap-4">
+                  <h4 class="font-semibold text-slate-900 text-base leading-snug">
+                    6. No matter how comfortable, safe, and objectively peaceful my current living situation is, I always seem to find new problems or daily anxieties to worry about.
+                  </h4>
+                  <span class="text-[10px] font-mono text-slate-400 bg-slate-100 px-2 py-0.5 rounded">Ref: [26]</span>
+                </div>
+                <div class="mt-4 grid grid-cols-2 gap-3">
+                  <label class="flex items-center justify-center p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors">
+                    <input type="radio" name="q6" value="True" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <span class="ml-2.5 text-sm font-semibold text-slate-700">True</span>
+                  </label>
+                  <label class="flex items-center justify-center p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors">
+                    <input type="radio" name="q6" value="False" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <span class="ml-2.5 text-sm font-semibold text-slate-700">False</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Question 7 -->
+              <div class="survey-card bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm transition-all hover:border-slate-300" id="card-q7">
+                <div class="flex items-start justify-between gap-4">
+                  <h4 class="font-semibold text-slate-900 text-base leading-snug">
+                    7. It has been months since I experienced a true "flow state"—where I was so deeply and silently immersed in an offline task or hobby that hours felt like minutes.
+                  </h4>
+                  <span class="text-[10px] font-mono text-slate-400 bg-slate-100 px-2 py-0.5 rounded">Refs: [20, 27]</span>
+                </div>
+                <div class="mt-4 grid grid-cols-2 gap-3">
+                  <label class="flex items-center justify-center p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors">
+                    <input type="radio" name="q7" value="True" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <span class="ml-2.5 text-sm font-semibold text-slate-700">True</span>
+                  </label>
+                  <label class="flex items-center justify-center p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors">
+                    <input type="radio" name="q7" value="False" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <span class="ml-2.5 text-sm font-semibold text-slate-700">False</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- PART 3 -->
+          <section class="mb-10">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="h-8 w-8 rounded-lg bg-indigo-100 text-indigo-700 font-bold flex items-center justify-center text-sm">P3</span>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900">Part 3: Ambiguous &amp; Reflective Questions</h3>
+                <p class="text-xs text-slate-500">Yes or No &bull; Readiness to reset brain chemistry, distress tolerance, phantom tethering</p>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <!-- Question 8 -->
+              <div class="survey-card bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm transition-all hover:border-slate-300" id="card-q8">
+                <div class="flex items-start justify-between gap-4">
+                  <h4 class="font-semibold text-slate-900 text-base leading-snug">
+                    8. If someone challenged you to put your smartphone in a lockbox for 30 days to reset your brain’s chemistry, would your immediate reaction be intense curiosity rather than sheer panic?
+                  </h4>
+                  <span class="text-[10px] font-mono text-slate-400 bg-slate-100 px-2 py-0.5 rounded">Refs: [28-30]</span>
+                </div>
+                <div class="mt-4 grid grid-cols-2 gap-3">
+                  <label class="flex items-center justify-center p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors">
+                    <input type="radio" name="q8" value="Yes" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <span class="ml-2.5 text-sm font-semibold text-slate-700">Yes</span>
+                  </label>
+                  <label class="flex items-center justify-center p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors">
+                    <input type="radio" name="q8" value="No" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <span class="ml-2.5 text-sm font-semibold text-slate-700">No</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Question 9 -->
+              <div class="survey-card bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm transition-all hover:border-slate-300" id="card-q9">
+                <div class="flex items-start justify-between gap-4">
+                  <h4 class="font-semibold text-slate-900 text-base leading-snug">
+                    9. Do you believe that intentionally seeking out hard, effortful, or uncomfortable experiences actually makes everyday life feel more satisfying and resilient?
+                  </h4>
+                  <span class="text-[10px] font-mono text-slate-400 bg-slate-100 px-2 py-0.5 rounded">Refs: [31-33]</span>
+                </div>
+                <div class="mt-4 grid grid-cols-2 gap-3">
+                  <label class="flex items-center justify-center p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors">
+                    <input type="radio" name="q9" value="Yes" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <span class="ml-2.5 text-sm font-semibold text-slate-700">Yes</span>
+                  </label>
+                  <label class="flex items-center justify-center p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors">
+                    <input type="radio" name="q9" value="No" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <span class="ml-2.5 text-sm font-semibold text-slate-700">No</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Question 10 -->
+              <div class="survey-card bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm transition-all hover:border-slate-300" id="card-q10">
+                <div class="flex items-start justify-between gap-4">
+                  <h4 class="font-semibold text-slate-900 text-base leading-snug">
+                    10. Even when your phone is turned completely off or placed face down on the table during a meal, do you still feel a subtle mental pull to check it?
+                  </h4>
+                  <span class="text-[10px] font-mono text-slate-400 bg-slate-100 px-2 py-0.5 rounded">Refs: [34, 35]</span>
+                </div>
+                <div class="mt-4 grid grid-cols-2 gap-3">
+                  <label class="flex items-center justify-center p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors">
+                    <input type="radio" name="q10" value="Yes" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <span class="ml-2.5 text-sm font-semibold text-slate-700">Yes</span>
+                  </label>
+                  <label class="flex items-center justify-center p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors">
+                    <input type="radio" name="q10" value="No" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <span class="ml-2.5 text-sm font-semibold text-slate-700">No</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Question 11 -->
+              <div class="survey-card bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm transition-all hover:border-slate-300" id="card-q11">
+                <div class="flex items-start justify-between gap-4">
+                  <h4 class="font-semibold text-slate-900 text-base leading-snug">
+                    11. Do you find yourself using your phone as an emotional "sedative" or a way to escape whenever you feel lonely, stressed, or bored?
+                  </h4>
+                  <span class="text-[10px] font-mono text-slate-400 bg-slate-100 px-2 py-0.5 rounded">Refs: [36-38]</span>
+                </div>
+                <div class="mt-4 grid grid-cols-2 gap-3">
+                  <label class="flex items-center justify-center p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors">
+                    <input type="radio" name="q11" value="Yes" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <span class="ml-2.5 text-sm font-semibold text-slate-700">Yes</span>
+                  </label>
+                  <label class="flex items-center justify-center p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors">
+                    <input type="radio" name="q11" value="No" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                    <span class="ml-2.5 text-sm font-semibold text-slate-700">No</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- PART 4 -->
+          <section class="mb-10">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="h-8 w-8 rounded-lg bg-indigo-100 text-indigo-700 font-bold flex items-center justify-center text-sm">P4</span>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900">Part 4: The Final Question</h3>
+                <p class="text-xs text-slate-500">Humorous Undertone &bull; Relational displacement check</p>
+              </div>
+            </div>
+
+            <div class="survey-card bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm transition-all hover:border-slate-300" id="card-q12">
+              <div class="flex items-start justify-between gap-4">
+                <h4 class="font-semibold text-slate-900 text-base leading-snug">
+                  12. Do you currently spend more face-to-face quality time with actual human beings than you do staring at a 3-by-6-inch glowing rectangle of glass, or has your phone officially become your primary romantic partner?
+                </h4>
+                <span class="text-[10px] font-mono text-slate-400 bg-slate-100 px-2 py-0.5 rounded">Refs: [39-42]</span>
+              </div>
+              <div class="mt-4 space-y-2.5">
+                <label class="flex items-start p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors group">
+                  <input type="radio" name="q12" value="A" class="mt-1 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                  <div class="ml-3 text-sm">
+                    <span class="font-medium text-slate-800 group-hover:text-indigo-900">A)</span>
+                    <span class="text-slate-600 ml-1">Humans still win—I spend plenty of face-to-face time with real, unpredictable people.</span>
+                  </div>
+                </label>
+                <label class="flex items-start p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors group">
+                  <input type="radio" name="q12" value="B" class="mt-1 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                  <div class="ml-3 text-sm">
+                    <span class="font-medium text-slate-800 group-hover:text-indigo-900">B)</span>
+                    <span class="text-slate-600 ml-1">My phone and I are practically married; I sleep with it next to my face and check it before saying good morning to anyone.</span>
+                  </div>
+                </label>
+                <label class="flex items-start p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors group">
+                  <input type="radio" name="q12" value="C" class="mt-1 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                  <div class="ml-3 text-sm">
+                    <span class="font-medium text-slate-800 group-hover:text-indigo-900">C)</span>
+                    <span class="text-slate-600 ml-1">I would answer this, but my phone just vibrated and I'm experiencing severe FOMO.</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </section>
+
+          <!-- Candidate Contact Email Field -->
+          <div class="survey-card bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm transition-all hover:border-slate-300 mb-6" id="card-survey-email">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <label for="survey-email-input" class="block font-semibold text-slate-900 text-base leading-snug">
+                  Candidate Contact Email Address <span class="text-rose-500">*</span>
+                </label>
+                <p class="text-xs text-slate-500 mt-1">
+                  Required to transmit your assessment to the Youdaimonia recovery database and receive your personalized profile report.
+                </p>
+              </div>
+              <span class="text-[10px] font-mono text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-100">Required</span>
+            </div>
+            <div class="mt-4">
+              <input 
+                type="email" 
+                id="survey-email-input" 
+                name="email" 
+                required 
+                placeholder="Enter your email address (e.g. yourname@example.com)" 
+                class="w-full px-4 py-3 rounded-xl border border-slate-300 text-slate-900 bg-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all text-sm font-medium"
+              />
+              <p id="survey-email-error" class="hidden text-xs font-semibold text-rose-600 mt-1.5">Please provide a valid email address before submitting.</p>
+            </div>
+          </div>
+
+          <!-- Hidden Input matching Google Sheet Header survey_results -->
+          <input 
+            type="text" 
+            name="survey_results" 
+            id="survey-results-input" 
+            class="sr-only" 
+            aria-hidden="true" 
+            tabindex="-1"
+          />
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm no-print">
+            <div>
+              <p class="text-sm font-semibold text-slate-800">Ready to review your brain recovery readiness profile?</p>
+              <p class="text-xs text-slate-500">Instant real-time recording to Google Sheet &amp; neurobiological synthesis.</p>
+              <p id="survey-unanswered-warning" class="hidden text-xs font-bold text-rose-600 mt-1"></p>
+            </div>
+            <button 
+              type="submit" 
+              id="survey-submit-btn"
+              class="w-full sm:w-auto px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm shadow-md shadow-indigo-200 transition-all flex items-center justify-center gap-2 active:scale-95"
+            >
+              <span id="survey-submit-label">Submit Assessment &amp; Calculate Profile</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </button>
+          </div>
+        </form>
+
+        <!-- Results Section -->
+        <div id="resultsModal" class="hidden mt-10 bg-white p-6 sm:p-8 rounded-3xl border border-indigo-100 shadow-xl no-print">
+          
+          <!-- Live Real-Time Submission Banner -->
+          <div id="survey-submitted-banner" class="mb-6 p-4 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center gap-3 text-emerald-900 text-sm">
+            <div class="w-8 h-8 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <div>
+              <p class="font-bold text-emerald-950">Assessment Recorded to Google Sheet in Real Time</p>
+              <p class="text-xs text-emerald-800 mt-0.5">Contact: <span id="confirmed-survey-email" class="font-bold"></span> &bull; All 12 neurobiological screening dimensions logged.</p>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between border-b border-slate-100 pb-5 mb-6">
+            <div>
+              <span class="text-xs uppercase tracking-wider font-bold text-indigo-600">Candidate Diagnostic Report</span>
+              <h3 class="text-2xl font-black text-slate-900 mt-0.5">Presentation Fit &amp; Neurobiology Breakdown</h3>
+            </div>
+            <div id="candidateBadge" class="px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></div>
+          </div>
+
+          <!-- High-Level Metrics Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80">
+              <div class="text-xs text-slate-500 font-semibold">Digital Dependence Index</div>
+              <div id="scoreDependence" class="text-2xl font-black text-slate-900 mt-1">--</div>
+              <div id="descDependence" class="text-xs text-slate-600 mt-1">Gauging habitual screen reach and dopamine loops.</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80">
+              <div class="text-xs text-slate-500 font-semibold">Boredom &amp; Discomfort Tolerance</div>
+              <div id="scoreTolerance" class="text-2xl font-black text-slate-900 mt-1">--</div>
+              <div id="descTolerance" class="text-xs text-slate-600 mt-1">Willingness to withstand friction without a quick hit.</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80">
+              <div class="text-xs text-slate-500 font-semibold">Neuroplastic Learning Rate</div>
+              <div id="scoreLearning" class="text-2xl font-black text-slate-900 mt-1">--</div>
+              <div id="descLearning" class="text-xs text-slate-600 mt-1">Speed of pivoting after negative emotional feedback.</div>
+            </div>
+          </div>
+
+          <!-- Personalized Insight -->
+          <div class="p-5 rounded-2xl bg-indigo-50/70 border border-indigo-100 mb-6">
+            <h4 class="font-bold text-indigo-950 text-sm flex items-center gap-2">
+              <span>💡</span> Clinical Presentation Candidacy Analysis
+            </h4>
+            <p id="candidateFeedback" class="text-sm text-indigo-900/90 mt-2 leading-relaxed"></p>
+          </div>
+
+          <!-- Actionable Next Steps -->
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-4 border-t border-slate-100">
+            <span class="text-xs text-slate-500">Ready to save or export this candidate's assessment?</span>
+            <div class="flex gap-2 w-full sm:w-auto">
+              <button type="button" onclick="window.print()" class="flex-1 sm:flex-initial px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold transition-colors">
+                Print / Save Summary
+              </button>
+              <button type="button" onclick="document.getElementById('survey-modal').scrollTo({top: 0, behavior: 'smooth'})" class="flex-1 sm:flex-initial px-4 py-2 rounded-xl border border-slate-200 hover:bg-slate-50 text-slate-700 text-xs font-semibold transition-colors">
+                Back to Top
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-400 no-print">
+        <p>Digital Addiction &amp; Brain Recovery Assessment Tool &bull; Adapted from Clinical Neurobiology Literature</p>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <!-- Requirements:
+       Footer with the email address: youdaimonia.us@gmail.com
+       Footer should also include the organization name: Youdaimonia. -->
+  <footer class="bg-black text-white border-t border-gray-800 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 pb-8 border-b border-gray-800">
+        
+        <!-- Organization Name & Logo in Footer -->
+        <div class="flex items-center gap-3">
+          <img 
+            src="https://lh3.googleusercontent.com/d/1PEB_VwtVLFQFcbTPyl-e76Nf2xZulUJM" 
+            alt="Youdaimonia Logo"
+            class="h-8 w-auto object-contain brightness-0 invert"
+            referrerpolicy="no-referrer"
+          />
+          <span class="font-display font-bold text-2xl tracking-tight text-white">Youdaimonia</span>
+        </div>
+
+        <!-- Links -->
+        <div class="flex flex-wrap justify-center gap-6 text-sm font-medium text-gray-300">
+          <a href="#who-we-are" class="hover:text-white transition-colors">Who We Are</a>
+          <a href="#mission" class="hover:text-white transition-colors">Mission Statement</a>
+          <a href="#signup" class="hover:text-white transition-colors">Join Community</a>
+          <a href="#survey" class="hover:text-white transition-colors">Take The Survey</a>
+        </div>
+
+        <!-- Contact Email Address as requested -->
+        <div class="flex items-center gap-2 text-sm">
+          <span class="text-gray-400">Inquiries:</span>
+          <a 
+            href="mailto:youdaimonia.us@gmail.com" 
+            class="text-[#08d656] font-semibold hover:underline underline-offset-4 transition-colors"
+          >
+            youdaimonia.us@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <!-- Copyright & Organization Detail -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+        <p>&copy; <span id="current-year"></span> <strong class="text-white">Youdaimonia</strong>. All rights reserved.</p>
+        <p>Restoring human agency and awareness through the practice of Eudaimonia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Hidden Iframe Target for Seamless Background Google Sheet Submissions without page reload -->
+  <iframe name="google_sheet_target" id="google_sheet_target" class="hidden" style="display:none; width:0; height:0; border:0;" tabindex="-1"></iframe>
+
+  <!-- JAVASCRIPT FOR INTERACTION & EMAIL SUBMIT FUNCTIONALITY -->
+  <script>
+    // Set dynamic current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Mobile navigation toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', function() {
+        const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+        mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('hidden');
+        hamburgerIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+      });
+
+      // Close mobile menu when links are clicked
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          hamburgerIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    // Email Sign-up Form Handler
+    // Sends email to Google Sheet in real time and displays "Submitted" below the field
+    const signupForm = document.getElementById('signup-form');
+    const emailInput = document.getElementById('email-input');
+    const submittedMessage = document.getElementById('submitted-message');
+    const errorMessage = document.getElementById('error-message');
+    const signupButton = document.getElementById('signup-button');
+
+    if (signupForm && emailInput && submittedMessage) {
+      signupForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const emailValue = emailInput.value.trim();
+
+        // Basic email validation regex
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(emailValue)) {
+          if (errorMessage) errorMessage.classList.remove('hidden');
+          submittedMessage.classList.add('hidden');
+          emailInput.focus();
+          return;
+        }
+
+        // Hide any error message
+        if (errorMessage) errorMessage.classList.add('hidden');
+
+        // Show "Submitted" message directly below the entry field as specified
+        submittedMessage.classList.remove('hidden');
+        
+        // Visual feedback
+        emailInput.classList.add('border-[#08d656]', 'bg-gray-50');
+        if (signupButton) {
+          signupButton.classList.add('opacity-90');
+        }
+
+        // Transmit to Google Sheet in real time
+        try {
+          signupForm.target = 'google_sheet_target';
+          HTMLFormElement.prototype.submit.call(signupForm);
+        } catch (err) {
+          try {
+            const formData = new FormData(signupForm);
+            const params = new URLSearchParams();
+            for (const [k, v] of formData.entries()) params.append(k, v);
+            fetch(signupForm.action, {
+              method: 'POST',
+              mode: 'no-cors',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: params.toString()
+            });
+          } catch (fetchErr) {
+            console.warn('Submission fallback error:', fetchErr);
+          }
+        }
+      });
+
+      // Hide error on typing
+      emailInput.addEventListener('input', function() {
+        if (errorMessage) errorMessage.classList.add('hidden');
+      });
+    }
+
+    // Survey Modal & Screening Logic
+    const totalQuestions = 12;
+
+    function onAnswerChange() {
+      let count = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        if (document.querySelector(`input[name="q${i}"]:checked`)) {
+          count++;
+          const card = document.getElementById(`card-q${i}`);
+          if (card) card.classList.remove('border-rose-400', 'bg-rose-50/20');
+        }
+      }
+      const answeredCountEl = document.getElementById('answeredCount');
+      if (answeredCountEl) answeredCountEl.textContent = count;
+      const pct = (count / totalQuestions) * 100;
+      const progressBar = document.getElementById('progressBar');
+      if (progressBar) progressBar.style.width = `${pct}%`;
+      const warning = document.getElementById('survey-unanswered-warning');
+      if (warning) warning.classList.add('hidden');
+    }
+
+    const surveyEmailInput = document.getElementById('survey-email-input');
+    const surveyEmailError = document.getElementById('survey-email-error');
+    const cardSurveyEmail = document.getElementById('card-survey-email');
+
+    if (surveyEmailInput) {
+      surveyEmailInput.addEventListener('input', function() {
+        if (surveyEmailError) surveyEmailError.classList.add('hidden');
+        if (cardSurveyEmail) cardSurveyEmail.classList.remove('border-rose-400', 'bg-rose-50/20');
+      });
+    }
+
+    function evaluateSurvey() {
+      const answers = {};
+      let unanswered = [];
+
+      for (let i = 1; i <= totalQuestions; i++) {
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        if (selected) {
+          answers['q' + i] = selected.value;
+          const card = document.getElementById(`card-q${i}`);
+          if (card) card.classList.remove('border-rose-400', 'bg-rose-50/20');
+        } else {
+          unanswered.push(i);
+          const card = document.getElementById(`card-q${i}`);
+          if (card) card.classList.add('border-rose-400', 'bg-rose-50/20');
+        }
+      }
+
+      if (unanswered.length > 0) {
+        const firstMissing = document.getElementById(`card-q${unanswered[0]}`);
+        if (firstMissing) firstMissing.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const warning = document.getElementById('survey-unanswered-warning');
+        if (warning) {
+          warning.textContent = `Please complete question ${unanswered[0]} before submitting. (${unanswered.length} remaining)`;
+          warning.classList.remove('hidden');
+        }
+        return;
+      }
+
+      // Email validation for candidate
+      const candidateEmail = surveyEmailInput ? surveyEmailInput.value.trim() : '';
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!candidateEmail || !emailPattern.test(candidateEmail)) {
+        if (cardSurveyEmail) {
+          cardSurveyEmail.classList.add('border-rose-400', 'bg-rose-50/20');
+          cardSurveyEmail.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        if (surveyEmailError) surveyEmailError.classList.remove('hidden');
+        if (surveyEmailInput) surveyEmailInput.focus();
+        return;
+      }
+
+      // Scoring Calculations
+      let dependenceRaw = 0;
+      if (answers.q1 === 'A') dependenceRaw += 2;
+      if (answers.q1 === 'C') dependenceRaw += 3;
+
+      if (answers.q2 === 'A') dependenceRaw += 3;
+      if (answers.q2 === 'B') dependenceRaw += 1;
+
+      if (answers.q4 === 'B') dependenceRaw += 1;
+      if (answers.q4 === 'C') dependenceRaw += 2;
+
+      if (answers.q5 === 'True') dependenceRaw += 2;
+      if (answers.q10 === 'Yes') dependenceRaw += 2;
+      if (answers.q11 === 'Yes') dependenceRaw += 2;
+
+      if (answers.q12 === 'B') dependenceRaw += 3;
+      if (answers.q12 === 'C') dependenceRaw += 2;
+
+      const dependencePercent = Math.min(100, Math.round((dependenceRaw / 17) * 100));
+
+      let toleranceRaw = 0;
+      if (answers.q1 === 'B') toleranceRaw += 2;
+      if (answers.q8 === 'Yes') toleranceRaw += 3;
+      if (answers.q9 === 'Yes') toleranceRaw += 3;
+      if (answers.q7 === 'False') toleranceRaw += 2;
+
+      let learningRate = "";
+      if (answers.q3 === 'A') learningRate = "Hyper-Elastic (1-2 Cycles)";
+      else if (answers.q3 === 'B') learningRate = "Standard Receptive (5-15 Cycles)";
+      else learningRate = "Compulsive Persistence (100+ Cycles)";
+
+      let badgeColor = "";
+      let badgeText = "";
+      let feedback = "";
+
+      if (dependencePercent >= 55 && answers.q9 === 'Yes') {
+        badgeColor = "bg-emerald-100 text-emerald-800 border border-emerald-300";
+        badgeText = "Tier 1: Prime Candidate (High Impact)";
+        feedback = "This candidate exhibits clear dopaminergic over-reliance and automated smartphone reflexes, but crucially retains strong intellectual curiosity and high discomfort tolerance (affirmed in Q8/Q9). They are primed to absorb the neurobiology concepts rapidly and turn clinical insights into lasting behavioral changes during your interactive presentation.";
+      } else if (dependencePercent >= 60 && answers.q9 === 'No') {
+        badgeColor = "bg-amber-100 text-amber-800 border border-amber-300";
+        badgeText = "Tier 2: High Need / Emotional Resistance";
+        feedback = "This candidate reports severe digital tethering and uses devices heavily as an emotional sedative (Q11). Because their tolerance for voluntary discomfort is currently low, the presentation should place heavy emphasis on micro-steps, grayscale transitions, and reframing friction as neurochemical renewal rather than deprivation.";
+      } else if (dependencePercent < 35) {
+        badgeColor = "bg-blue-100 text-blue-800 border border-blue-300";
+        badgeText = "Tier 3: Baseline Resilient / Low Urgency";
+        feedback = "This candidate demonstrates enviable offline engagement and deliberate device boundaries (regular flow states, comfortable checkout waiting). While they may find the presentation fascinating from a theoretical neurobiology standpoint, their immediate personal clinical need for behavioral rehabilitation is low.";
+      } else {
+        badgeColor = "bg-indigo-100 text-indigo-800 border border-indigo-300";
+        badgeText = "Tier 2: Receptive Practitioner";
+        feedback = "This candidate represents the typical modern adult experiencing moderate attention fragmentation and reflex loops. They will benefit significantly from tactile exercises, notification hygiene protocols, and your lockbox dopamine reset frameworks.";
+      }
+
+      const toleranceStr = toleranceRaw >= 6 ? "High (Resilient)" : (toleranceRaw >= 3 ? "Moderate" : "Low (Avoidant)");
+
+      // Render Diagnostic Metrics in UI
+      document.getElementById('scoreDependence').textContent = `${dependencePercent}%`;
+      document.getElementById('scoreTolerance').textContent = toleranceStr;
+      document.getElementById('scoreLearning').textContent = learningRate;
+
+      const badgeEl = document.getElementById('candidateBadge');
+      badgeEl.className = `px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${badgeColor}`;
+      badgeEl.textContent = badgeText;
+
+      document.getElementById('candidateFeedback').textContent = feedback;
+
+      const confirmedEmailEl = document.getElementById('confirmed-survey-email');
+      if (confirmedEmailEl) confirmedEmailEl.textContent = candidateEmail;
+
+      // Compile detailed survey_results payload for Google Sheet
+      const answersList = [];
+      for (let i = 1; i <= totalQuestions; i++) {
+        answersList.push(`Q${i}:${answers['q' + i]}`);
+      }
+      const structuredResults = `${badgeText} | Digital Dependence: ${dependencePercent}% | Discomfort Tolerance: ${toleranceStr} | Learning Rate: ${learningRate} | Answers: [${answersList.join(', ')}]`;
+
+      const surveyResultsInput = document.getElementById('survey-results-input');
+      if (surveyResultsInput) {
+        surveyResultsInput.value = structuredResults;
+      }
+
+      // Submit Form to Google Sheet Web App URL in real time
+      const surveyFormEl = document.getElementById('surveyForm');
+      if (surveyFormEl) {
+        try {
+          surveyFormEl.target = 'google_sheet_target';
+          HTMLFormElement.prototype.submit.call(surveyFormEl);
+        } catch (submitErr) {
+          try {
+            const formData = new FormData(surveyFormEl);
+            const params = new URLSearchParams();
+            for (const [k, v] of formData.entries()) params.append(k, v);
+            fetch(surveyFormEl.action, {
+              method: 'POST',
+              mode: 'no-cors',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: params.toString()
+            });
+          } catch (fetchErr) {
+            console.warn('Survey submission fetch fallback error:', fetchErr);
+          }
+        }
+      }
+
+      // Update submit button appearance
+      const submitLabel = document.getElementById('survey-submit-label');
+      if (submitLabel) submitLabel.textContent = "✓ Assessment Submitted to Google Sheet";
+
+      const modal = document.getElementById('resultsModal');
+      modal.classList.remove('hidden');
+      modal.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Attach submit event listener to surveyForm
+    const surveyFormEl = document.getElementById('surveyForm');
+    if (surveyFormEl) {
+      surveyFormEl.addEventListener('submit', function(e) {
+        e.preventDefault();
+        evaluateSurvey();
+      });
+    }
+
+    function resetSurvey() {
+      if (confirm('Are you sure you want to reset all answers?')) {
+        document.getElementById('surveyForm').reset();
+        for (let i = 1; i <= totalQuestions; i++) {
+          const card = document.getElementById(`card-q${i}`);
+          if (card) card.classList.remove('border-rose-400', 'bg-rose-50/20');
+        }
+        if (cardSurveyEmail) cardSurveyEmail.classList.remove('border-rose-400', 'bg-rose-50/20');
+        if (surveyEmailError) surveyEmailError.classList.add('hidden');
+        const submitLabel = document.getElementById('survey-submit-label');
+        if (submitLabel) submitLabel.textContent = "Submit Assessment & Calculate Profile";
+        document.getElementById('resultsModal').classList.add('hidden');
+        onAnswerChange();
+      }
+    }
+
+    let isCleanView = false;
+    function toggleViewMode() {
+      isCleanView = !isCleanView;
+      const label = document.getElementById('viewModeLabel');
+      const cards = document.querySelectorAll('.survey-card');
+
+      if (isCleanView) {
+        if (label) label.textContent = "Show Interactive Mode";
+        cards.forEach(card => card.classList.add('border-dashed'));
+      } else {
+        if (label) label.textContent = "Show Printable Sheet";
+        cards.forEach(card => card.classList.remove('border-dashed'));
+      }
+    }
+
+    // Survey Modal Open / Close Controls
+    const surveyModal = document.getElementById('survey-modal');
+    const openSurveyBtns = document.querySelectorAll('#open-survey-btn, a[href="#survey-modal"]');
+    const closeSurveyBtns = document.querySelectorAll('.close-survey-action');
+
+    openSurveyBtns.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (surveyModal) {
+          surveyModal.classList.remove('hidden');
+          surveyModal.scrollTop = 0;
+          onAnswerChange();
+        }
+      });
+    });
+
+    closeSurveyBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        if (surveyModal) surveyModal.classList.add('hidden');
+      });
+    });
+
+    if (surveyModal) {
+      surveyModal.addEventListener('click', function(e) {
+        if (e.target === surveyModal) {
+          surveyModal.classList.add('hidden');
+        }
+      });
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && surveyModal && !surveyModal.classList.contains('hidden')) {
+        surveyModal.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>
