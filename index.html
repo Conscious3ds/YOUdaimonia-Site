@@ -79,41 +79,42 @@
 
   <!-- TOP ANNOUNCEMENT BAR -->
   <div class="bg-[#4522a0] text-white py-2 px-4 text-center text-xs sm:text-sm font-medium tracking-wide">
-    <div class="max-w-7xl mx-auto flex items-center justify-center gap-2">
+    <div class="max-w-[1600px] mx-auto flex items-center justify-center gap-2">
       <span class="inline-block w-2 h-2 rounded-full bg-[#08d656] animate-pulse"></span>
       <span>Community Survey Open: Explore the interactive experience & attend our upcoming event.</span>
-      <a href="#survey" class="underline underline-offset-2 hover:text-[#08d656] transition-colors font-semibold ml-1">Take Survey &rarr;</a>
+      <a href="#survey" class="underline underline-offset-2 hover:text-[#08d656] transition-colors font-semibold ml-1 whitespace-nowrap">Take Survey &rarr;</a>
     </div>
   </div>
 
   <!-- NAVIGATION HEADER -->
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[4.5rem] sm:min-h-[5rem] py-2.5 sm:py-3 flex items-center justify-between">
+    <div class="max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 min-h-[4.5rem] sm:min-h-[5rem] py-2.5 sm:py-3 flex items-center justify-between gap-4">
       <!-- Logo sized down proportionally on all versions -->
-      <a href="#" class="flex items-center group focus:outline-none focus:ring-2 focus:ring-[#4522a0] rounded-lg p-1" aria-label="Youdaimonia Home">
+      <a href="#" class="flex items-center group focus:outline-none focus:ring-2 focus:ring-[#4522a0] rounded-lg p-1 shrink-0" aria-label="Youdaimonia Home">
         <img 
           src="https://lh3.googleusercontent.com/d/1AzFVt6kPPkUIe1zQjGUmaOR_nu81FetG" 
           alt="Your Image Description"
-          class="h-10 sm:h-10 md:h-11 lg:h-12 w-auto max-w-[55vw] sm:max-w-none object-contain transition-transform duration-200 group-hover:scale-105"
+          class="h-10 sm:h-10 md:h-11 lg:h-12 w-auto max-w-[50vw] sm:max-w-none object-contain transition-transform duration-200 group-hover:scale-105"
           referrerpolicy="no-referrer"
         />
       </a>
 
-      <!-- Desktop Navigation Links -->
-      <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold text-black">
-        <a href="#who-we-are" class="hover:text-[#4522a0] transition-colors py-1">Who We Are</a>
-        <a href="#mission" class="hover:text-[#4522a0] transition-colors py-1">Mission</a>
-        <a href="#digital-dementia" class="hover:text-[#4522a0] transition-colors py-1">Digital Dementia</a>
-        <a href="#concept-of-eudaimonia" class="hover:text-[#4522a0] transition-colors py-1">Eudaimonia</a>
-        <a href="#signup" class="hover:text-[#4522a0] transition-colors py-1">Join Community</a>
-        <a href="#survey" class="hover:text-[#4522a0] transition-colors py-1">Take The Survey</a>
+      <!-- Desktop Navigation Links (Wider field & whitespace-nowrap prevents words from stacking) -->
+      <nav class="hidden lg:flex items-center gap-4 xl:gap-6 2xl:gap-8 text-xs xl:text-sm font-semibold text-black">
+        <a href="#who-we-are" class="whitespace-nowrap hover:text-[#4522a0] transition-colors py-1">Who We Are</a>
+        <a href="#mission" class="whitespace-nowrap hover:text-[#4522a0] transition-colors py-1">Mission</a>
+        <a href="#digital-dementia" class="whitespace-nowrap hover:text-[#4522a0] transition-colors py-1">Digital Dementia</a>
+        <a href="#digital-anhedonia" class="whitespace-nowrap hover:text-[#4522a0] transition-colors py-1">Digital Anhedonia</a>
+        <a href="#concept-of-eudaimonia" class="whitespace-nowrap hover:text-[#4522a0] transition-colors py-1">Eudaimonia</a>
+        <a href="#signup" class="whitespace-nowrap hover:text-[#4522a0] transition-colors py-1">Join Community</a>
+        <a href="#survey" class="whitespace-nowrap hover:text-[#4522a0] transition-colors py-1">Take The Survey</a>
       </nav>
 
       <!-- Action Button -->
-      <div class="hidden sm:flex items-center gap-3">
+      <div class="hidden lg:flex items-center gap-3 shrink-0">
         <a 
           href="#survey" 
-          class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-bold text-white bg-[#4522a0] hover:bg-[#371987] transition-all shadow-sm hover:shadow active:scale-95"
+          class="whitespace-nowrap inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs xl:text-sm font-bold text-white bg-[#4522a0] hover:bg-[#371987] transition-all shadow-sm hover:shadow active:scale-95"
         >
           Take The Survey
         </a>
@@ -123,7 +124,7 @@
       <button 
         type="button" 
         id="mobile-menu-btn"
-        class="md:hidden p-2 rounded-lg text-black hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#4522a0]"
+        class="lg:hidden p-2 rounded-lg text-black hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#4522a0]"
         aria-label="Toggle Navigation Menu"
         aria-expanded="false"
       >
@@ -137,10 +138,11 @@
     </div>
 
     <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="hidden md:hidden border-b border-gray-100 bg-white px-4 pt-3 pb-6 space-y-3">
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-gray-100 bg-white px-4 pt-3 pb-6 space-y-3">
       <a href="#who-we-are" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-black hover:bg-gray-50 hover:text-[#4522a0]">Who We Are</a>
       <a href="#mission" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-black hover:bg-gray-50 hover:text-[#4522a0]">Mission Statement</a>
       <a href="#digital-dementia" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-black hover:bg-gray-50 hover:text-[#4522a0]">Digital Dementia</a>
+      <a href="#digital-anhedonia" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-black hover:bg-gray-50 hover:text-[#4522a0]">Digital Anhedonia</a>
       <a href="#concept-of-eudaimonia" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-black hover:bg-gray-50 hover:text-[#4522a0]">The Concept of Eudaimonia</a>
       <a href="#signup" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-black hover:bg-gray-50 hover:text-[#4522a0]">Join Community</a>
       <a href="#survey" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-black hover:bg-gray-50 hover:text-[#4522a0]">Take The Survey</a>
@@ -155,7 +157,7 @@
   <main class="flex-grow">
     <!-- HERO SECTION -->
     <section class="relative bg-gradient-to-b from-gray-50 via-white to-white pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
           <!-- Hero Text Column -->
@@ -243,7 +245,7 @@
 
     <!-- SECTION: WHO WE ARE -->
     <section id="who-we-are" class="py-20 bg-white border-t border-gray-100">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
@@ -280,7 +282,7 @@
             <!-- Exact required body text -->
             <div class="space-y-4 text-base sm:text-lg text-black leading-relaxed">
               <p>
-                A group of people who are learning more about how our brains function in order to take back the agency of ourselves and our family, in an effort to reverse the effects of digital dementia through allowing our digital addiction to effect our mind, body and spirit. We take full responsibility for who we are and why we need to change, and we also recognize that our attention has been monetized by corporations selling products that have been strategically designed to hack our mind and body's for capitalizing on profits at the expense of our mind, body and spirit. We strive to bring fact based information from the most recent studies, backed by science literature and professionals in various fields.
+                A group of people who strive to understand the neurochemistry of our brain in order to reclaim agency over ourselves and our families, in an effort to reverse the effects of digital dementia brought on by our digital addictions. We take full responsibility for who we are and why we need to change, while recognizing that our attention has been monetized by corporations who sell products that have been strategically designed to hack our biology for profits at the expense of our mind, body and spirit. We strive to bring fact based information from the most recent studies, backed by science literature and professionals in various fields.
               </p>
             </div>
 
@@ -415,8 +417,62 @@
       </div>
     </section>
 
+    <!-- SECTION: UNDERSTANDING DIGITAL ANHEDONIA -->
+    <section id="digital-anhedonia" class="py-20 bg-gray-50 border-t border-gray-200">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header Pill & Section Title -->
+        <div class="text-center space-y-4 mb-8">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#e6fbf0] text-[#08d656] text-xs font-bold uppercase tracking-wider">
+            Neurobiology &amp; Dopamine Baseline
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-black tracking-tight">
+            Understanding Digital Anhedonia
+          </h2>
+          <div class="w-16 h-1 bg-[#4522a0] mx-auto rounded-full"></div>
+        </div>
+
+        <!-- Body of Text Card with subtle accent styling -->
+        <div class="bg-white rounded-2xl p-8 sm:p-12 border-2 border-gray-200 shadow-sm relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-2 h-full bg-[#4522a0]"></div>
+          
+          <div class="space-y-6 text-base sm:text-lg text-black leading-relaxed font-normal text-left sm:text-justify">
+            <p>
+              Digital anhedonia happens when your brain gets overwhelmed by the constant, high-speed hits of dopamine triggered by endless scrolling, notifications, and short videos. To protect itself from this non-stop digital flood, your brain turns down its natural sensitivity to pleasure, setting your baseline mood lower than normal.
+            </p>
+            <p>
+              As a result, everyday real-world activities—like reading a book, taking a walk in nature, or having a quiet conversation—start to feel flat, boring, and unrewarding. This leaves you feeling unmotivated, restless, and constantly reaching back for your phone just to escape that empty feeling.
+            </p>
+            <p class="pt-4 border-t border-gray-200 font-medium text-black">
+              Thankfully, by taking a deliberate break from screens, your brain can reset its reward system, bringing natural color, focus, and genuine joy back into your everyday life.
+            </p>
+          </div>
+
+          <!-- Highlight takeaway pillars -->
+          <div class="mt-8 pt-6 border-t border-gray-200 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+            <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 shadow-xs">
+              <span class="text-xs font-bold uppercase tracking-wider text-[#4522a0]">The Trigger</span>
+              <p class="text-sm font-bold text-black mt-1">Dopamine Flood</p>
+              <p class="text-xs text-gray-500 mt-0.5">Endless scrolling, notifications &amp; fast dopamine</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 shadow-xs">
+              <span class="text-xs font-bold uppercase tracking-wider text-rose-600">The Impact</span>
+              <p class="text-sm font-bold text-black mt-1">Blunted Sensitivity</p>
+              <p class="text-xs text-gray-500 mt-0.5">Real-world activities feel flat &amp; boring</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 shadow-xs">
+              <span class="text-xs font-bold uppercase tracking-wider text-[#08d656]">The Remedy</span>
+              <p class="text-sm font-bold text-black mt-1">Reward Reset</p>
+              <p class="text-xs text-gray-500 mt-0.5">Deliberate screen breaks restore natural joy</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <!-- SECTION: THE CONCEPT OF EUDAIMONIA -->
-    <section id="concept-of-eudaimonia" class="py-20 bg-gray-50 border-t border-gray-200">
+    <section id="concept-of-eudaimonia" class="py-20 bg-white border-t border-gray-200">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Header Pill & Section Title -->
@@ -431,7 +487,7 @@
         </div>
 
         <!-- Body of Text Card -->
-        <div class="bg-white rounded-2xl p-8 sm:p-12 border-2 border-gray-200 shadow-sm relative overflow-hidden">
+        <div class="bg-gray-50 rounded-2xl p-8 sm:p-12 border-2 border-gray-200 shadow-sm relative overflow-hidden">
           <div class="absolute top-0 left-0 w-2 h-full bg-[#4522a0]"></div>
           
           <div class="space-y-6 text-base sm:text-lg text-black leading-relaxed font-normal text-left sm:text-justify">
@@ -448,17 +504,17 @@
 
           <!-- Highlight takeaway pillars -->
           <div class="mt-8 pt-6 border-t border-gray-200 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-            <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 shadow-xs">
+            <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-xs">
               <span class="text-xs font-bold uppercase tracking-wider text-rose-600">The Friction</span>
               <p class="text-sm font-bold text-black mt-1">Cheap Dopamine</p>
               <p class="text-xs text-gray-500 mt-0.5">Passive scrolling &amp; cognitive decline</p>
             </div>
-            <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 shadow-xs">
+            <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-xs">
               <span class="text-xs font-bold uppercase tracking-wider text-[#4522a0]">The Antidote</span>
               <p class="text-sm font-bold text-black mt-1">Slow Dopamine</p>
               <p class="text-xs text-gray-500 mt-0.5">Effortful pursuits &amp; quiet reflection</p>
             </div>
-            <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 shadow-xs">
+            <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-xs">
               <span class="text-xs font-bold uppercase tracking-wider text-[#08d656]">The Transformation</span>
               <p class="text-sm font-bold text-black mt-1">A Powerful Homecoming</p>
               <p class="text-xs text-gray-500 mt-0.5">Focus, clarity &amp; human connection</p>
@@ -638,7 +694,7 @@
                 🧠
               </div>
               <div>
-                <h1 id="survey-modal-title" class="text-base sm:text-lg font-bold text-slate-900 leading-tight">Digital Addiction &amp; Brain Recovery</h1>
+                <h1 id="survey-modal-title" class="text-base sm:text-lg font-bold text-slate-900 leading-tight">Interactive Event Candidate Survey</h1>
                 <p class="text-xs text-slate-500">Candidate Diagnostic &amp; Neurobiology Screening Survey</p>
               </div>
             </div>
@@ -685,17 +741,16 @@
             <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-indigo-50 text-indigo-700 border border-indigo-100">
               Target Audience: Adults (Ages 18+)
             </span>
-            <span class="text-xs text-slate-500 font-mono">12 Clinical &amp; Neurobiological Screening Items</span>
+            <span class="text-xs text-slate-500 font-mono">13 Screening Items (Preliminary + 12 Clinical &amp; Neurobiological)</span>
           </div>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">The Digital Addiction &amp; Brain Recovery Survey</h2>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Are You The Perfect Storm We Are Looking For?</h2>
           <p class="mt-3 text-slate-600 leading-relaxed text-sm sm:text-base">
-            This screening survey is engineered to identify prime candidates for the interactive presentation on overcoming compulsive device habits. 
-            It evaluates three core predictive dimensions: <strong class="text-slate-800">Behavioral Learning Rate</strong>, <strong class="text-slate-800">Dopamine Tolerance for Discomfort/Boredom</strong>, and <strong class="text-slate-800">Emotional Awareness</strong>.
+            This survey is intended for the selection of optimal candidates who are ready to commit to becoming the 2.0 versions of themselves by engaging in stimulating educational material, participating in fun, tactile-driven group activities, and being open to personal accountability and epic paradigm shifts. There is no pass or fail; we simply want to know how deep down the rabbit hole you are and how determined you are to crawl out of that rabbit hole and back into the world of meaningful living.
           </p>
 
           <div class="no-print mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-            <span>Completion Progress: <strong id="answeredCount" class="text-indigo-600">0</strong> of 12 Answered</span>
-            <button type="button" onclick="resetSurvey()" class="text-slate-400 hover:text-rose-600 transition-colors">Reset Answers</button>
+            <span>Completion Progress: <strong id="answeredCount" class="text-indigo-600">0</strong> of 13 Answered</span>
+            <button type="button" onclick="requestResetSurvey()" class="text-slate-400 hover:text-rose-600 transition-colors">Reset Answers</button>
           </div>
         </div>
 
@@ -708,6 +763,36 @@
           novalidate
         >
           
+          <!-- PRELIMINARY INQUIRY -->
+          <section class="mb-10">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="h-8 w-8 rounded-lg bg-indigo-100 text-indigo-700 font-bold flex items-center justify-center text-sm">P0</span>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900">Preliminary Inquiry: Digital Fatigue &amp; Social Media Detachment</h3>
+                <p class="text-xs text-slate-500">True or False &bull; Identifying baseline motivation, digital exhaustion, and exit desires</p>
+              </div>
+            </div>
+
+            <div class="survey-card bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm transition-all hover:border-slate-300" id="card-q0">
+              <div class="flex items-start justify-between gap-4">
+                <h4 class="font-semibold text-slate-900 text-base leading-snug">
+                  Preliminary Inquiry: I have thought about deleting all my social media platforms at least once or on multiple occasions.
+                </h4>
+                <span class="text-[10px] font-mono text-indigo-600 bg-indigo-50 border border-indigo-100 px-2 py-0.5 rounded font-semibold">Baseline Intent</span>
+              </div>
+              <div class="mt-4 grid grid-cols-2 gap-3">
+                <label class="flex items-center justify-center p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors group">
+                  <input type="radio" name="q0" value="True" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                  <span class="ml-2.5 text-sm font-semibold text-slate-700 group-hover:text-indigo-900">True</span>
+                </label>
+                <label class="flex items-center justify-center p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors group">
+                  <input type="radio" name="q0" value="False" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300" onchange="onAnswerChange()">
+                  <span class="ml-2.5 text-sm font-semibold text-slate-700 group-hover:text-indigo-900">False</span>
+                </label>
+              </div>
+            </div>
+          </section>
+
           <!-- PART 1 -->
           <section class="mb-10">
             <div class="flex items-center gap-3 mb-4">
@@ -1062,29 +1147,28 @@
             </div>
           </section>
 
-          <!-- Candidate Contact Email Field -->
+          <!-- Candidate Contact Email Field (Optional) -->
           <div class="survey-card bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm transition-all hover:border-slate-300 mb-6" id="card-survey-email">
             <div class="flex items-start justify-between gap-4">
               <div>
                 <label for="survey-email-input" class="block font-semibold text-slate-900 text-base leading-snug">
-                  Candidate Contact Email Address <span class="text-rose-500">*</span>
+                  Candidate Contact Email Address <span class="text-xs font-normal text-slate-500">(Optional &mdash; to save your report &amp; receive event invitation)</span>
                 </label>
                 <p class="text-xs text-slate-500 mt-1">
-                  Required to transmit your assessment to the Youdaimonia recovery database and receive your personalized profile report.
+                  Provide your email if you'd like your diagnostic profile logged with the Youdaimonia recovery database and sent to you.
                 </p>
               </div>
-              <span class="text-[10px] font-mono text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-100">Required</span>
+              <span class="text-[10px] font-mono text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-100">Optional</span>
             </div>
             <div class="mt-4">
               <input 
                 type="email" 
                 id="survey-email-input" 
                 name="email" 
-                required 
                 placeholder="Enter your email address (e.g. yourname@example.com)" 
                 class="w-full px-4 py-3 rounded-xl border border-slate-300 text-slate-900 bg-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all text-sm font-medium"
               />
-              <p id="survey-email-error" class="hidden text-xs font-semibold text-rose-600 mt-1.5">Please provide a valid email address before submitting.</p>
+              <p id="survey-email-error" class="hidden text-xs font-semibold text-rose-600 mt-1.5">Please provide a valid email address.</p>
             </div>
           </div>
 
@@ -1102,15 +1186,14 @@
           <div class="flex flex-col sm:flex-row items-center justify-between gap-4 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm no-print">
             <div>
               <p class="text-sm font-semibold text-slate-800">Ready to review your brain recovery readiness profile?</p>
-              <p class="text-xs text-slate-500">Instant real-time recording to Google Sheet &amp; neurobiological synthesis.</p>
-              <p id="survey-unanswered-warning" class="hidden text-xs font-bold text-rose-600 mt-1"></p>
+              <p class="text-xs text-slate-500">Instant synthesis across neurobiological habit persistence &amp; discomfort tolerance.</p>
             </div>
             <button 
               type="submit" 
               id="survey-submit-btn"
               class="w-full sm:w-auto px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm shadow-md shadow-indigo-200 transition-all flex items-center justify-center gap-2 active:scale-95"
             >
-              <span id="survey-submit-label">Submit Assessment &amp; Calculate Profile</span>
+              <span id="survey-submit-label">Calculate Candidate Profile</span>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
               </svg>
@@ -1121,8 +1204,8 @@
         <!-- Results Section -->
         <div id="resultsModal" class="hidden mt-10 bg-white p-6 sm:p-8 rounded-3xl border border-indigo-100 shadow-xl no-print">
           
-          <!-- Live Real-Time Submission Banner -->
-          <div id="survey-submitted-banner" class="mb-6 p-4 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center gap-3 text-emerald-900 text-sm">
+          <!-- Live Real-Time Submission Banner (shown if email provided) -->
+          <div id="survey-submitted-banner" class="hidden mb-6 p-4 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center gap-3 text-emerald-900 text-sm">
             <div class="w-8 h-8 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
@@ -1130,7 +1213,7 @@
             </div>
             <div>
               <p class="font-bold text-emerald-950">Assessment Recorded to Google Sheet in Real Time</p>
-              <p class="text-xs text-emerald-800 mt-0.5">Contact: <span id="confirmed-survey-email" class="font-bold"></span> &bull; All 12 neurobiological screening dimensions logged.</p>
+              <p class="text-xs text-emerald-800 mt-0.5">Contact: <span id="confirmed-survey-email" class="font-bold"></span> &bull; All 13 neurobiological screening dimensions logged.</p>
             </div>
           </div>
 
@@ -1185,8 +1268,32 @@
 
       </div>
 
+      <!-- Toast Alert Notification -->
+      <div id="surveyAlert" class="fixed bottom-6 right-6 z-50 hidden max-w-sm bg-slate-900 text-white px-5 py-4 rounded-2xl shadow-2xl border border-slate-700 transition-all duration-300 transform translate-y-2 flex items-center gap-3">
+        <span class="text-xl">⚠️</span>
+        <div class="flex-1 text-xs">
+          <p id="surveyAlertMessage" class="font-medium text-slate-200 leading-snug">Please answer all questions before generating your candidate profile.</p>
+        </div>
+        <button type="button" onclick="hideSurveyAlert()" class="text-slate-400 hover:text-white text-sm font-bold ml-2">&times;</button>
+      </div>
+
+      <!-- Confirmation Reset Modal -->
+      <div id="confirmResetModal" class="fixed inset-0 z-50 hidden bg-slate-950/60 backdrop-blur-xs items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-sm w-full p-6 shadow-2xl border border-slate-200 text-center">
+          <div class="w-12 h-12 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center mx-auto mb-4 text-xl">
+            🗑️
+          </div>
+          <h4 class="text-base font-bold text-slate-900 mb-1">Clear all responses?</h4>
+          <p class="text-xs text-slate-500 mb-6">This will reset all your selected answers across all 13 questions and clear your diagnostic profile.</p>
+          <div class="grid grid-cols-2 gap-3">
+            <button type="button" onclick="closeResetModal()" class="w-full py-2.5 rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 hover:bg-slate-50">Cancel</button>
+            <button type="button" onclick="executeResetSurvey()" class="w-full py-2.5 rounded-xl bg-rose-600 text-xs font-semibold text-white hover:bg-rose-700 shadow-sm shadow-rose-200">Yes, Reset</button>
+          </div>
+        </div>
+      </div>
+
       <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-400 no-print">
-        <p>Digital Addiction &amp; Brain Recovery Assessment Tool &bull; Adapted from Clinical Neurobiology Literature</p>
+        <p>Interactive Event Candidate Assessment Tool &bull; Adapted from Clinical Neurobiology Literature</p>
       </footer>
 
     </div>
@@ -1197,7 +1304,7 @@
        Footer with the email address: info@youdaimonia.us
        Footer should also include the organization name: Youdaimonia. -->
   <footer class="bg-black text-white border-t border-gray-800 py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
       <div class="flex flex-col md:flex-row items-center justify-between gap-8 pb-8 border-b border-gray-800">
         
         <!-- Organization Name & Logo in Footer -->
@@ -1216,6 +1323,7 @@
           <a href="#who-we-are" class="hover:text-white transition-colors">Who We Are</a>
           <a href="#mission" class="hover:text-white transition-colors">Mission Statement</a>
           <a href="#digital-dementia" class="hover:text-white transition-colors">Digital Dementia</a>
+          <a href="#digital-anhedonia" class="hover:text-white transition-colors">Digital Anhedonia</a>
           <a href="#concept-of-eudaimonia" class="hover:text-white transition-colors">Eudaimonia</a>
           <a href="#signup" class="hover:text-white transition-colors">Join Community</a>
           <a href="#survey" class="hover:text-white transition-colors">Take The Survey</a>
@@ -1338,24 +1446,27 @@
     }
 
     // Survey Modal & Screening Logic
-    const totalQuestions = 12;
+    const questionKeys = ['q0', 'q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10', 'q11', 'q12'];
+    const totalQuestions = questionKeys.length;
 
     function onAnswerChange() {
-      let count = 0;
-      for (let i = 1; i <= totalQuestions; i++) {
-        if (document.querySelector(`input[name="q${i}"]:checked`)) {
-          count++;
-          const card = document.getElementById(`card-q${i}`);
-          if (card) card.classList.remove('border-rose-400', 'bg-rose-50/20');
+      let answered = 0;
+      for (const qKey of questionKeys) {
+        const radios = document.getElementsByName(qKey);
+        for (const r of radios) {
+          if (r.checked) {
+            answered++;
+            const card = document.getElementById(`card-${qKey}`);
+            if (card) card.classList.remove('border-rose-400', 'bg-rose-50/20');
+            break;
+          }
         }
       }
       const answeredCountEl = document.getElementById('answeredCount');
-      if (answeredCountEl) answeredCountEl.textContent = count;
-      const pct = (count / totalQuestions) * 100;
+      if (answeredCountEl) answeredCountEl.textContent = answered;
+      const progressPercent = (answered / totalQuestions) * 100;
       const progressBar = document.getElementById('progressBar');
-      if (progressBar) progressBar.style.width = `${pct}%`;
-      const warning = document.getElementById('survey-unanswered-warning');
-      if (warning) warning.classList.add('hidden');
+      if (progressBar) progressBar.style.width = progressPercent + '%';
     }
 
     const surveyEmailInput = document.getElementById('survey-email-input');
@@ -1369,49 +1480,79 @@
       });
     }
 
+    function showSurveyAlert(msg) {
+      const toast = document.getElementById('surveyAlert');
+      if (!toast) return;
+      const alertMsgEl = document.getElementById('surveyAlertMessage');
+      if (alertMsgEl) alertMsgEl.textContent = msg;
+      toast.classList.remove('hidden');
+      toast.classList.remove('translate-y-2');
+      setTimeout(() => {
+        hideSurveyAlert();
+      }, 5000);
+    }
+
+    function hideSurveyAlert() {
+      const toast = document.getElementById('surveyAlert');
+      if (toast) {
+        toast.classList.add('hidden');
+        toast.classList.add('translate-y-2');
+      }
+    }
+
     function evaluateSurvey() {
       const answers = {};
       let unanswered = [];
 
-      for (let i = 1; i <= totalQuestions; i++) {
-        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+      for (const qKey of questionKeys) {
+        const selected = document.querySelector(`input[name="${qKey}"]:checked`);
+        const card = document.getElementById(`card-${qKey}`);
         if (selected) {
-          answers['q' + i] = selected.value;
-          const card = document.getElementById(`card-q${i}`);
+          answers[qKey] = selected.value;
           if (card) card.classList.remove('border-rose-400', 'bg-rose-50/20');
         } else {
-          unanswered.push(i);
-          const card = document.getElementById(`card-q${i}`);
+          unanswered.push(qKey);
           if (card) card.classList.add('border-rose-400', 'bg-rose-50/20');
         }
       }
 
       if (unanswered.length > 0) {
-        const firstMissing = document.getElementById(`card-q${unanswered[0]}`);
-        if (firstMissing) firstMissing.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        const warning = document.getElementById('survey-unanswered-warning');
-        if (warning) {
-          warning.textContent = `Please complete question ${unanswered[0]} before submitting. (${unanswered.length} remaining)`;
-          warning.classList.remove('hidden');
+        const firstMissingKey = unanswered[0];
+        const firstMissing = document.getElementById(`card-${firstMissingKey}`);
+        if (firstMissing) {
+          firstMissing.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
+        const displayName = firstMissingKey === 'q0' ? 'the Preliminary Inquiry' : `Question ${firstMissingKey.replace('q', '')}`;
+        showSurveyAlert(`Please answer ${displayName} before generating your diagnostic profile.`);
         return;
       }
 
-      // Email validation for candidate
+      // Email validation if candidate chose to provide an email
       const candidateEmail = surveyEmailInput ? surveyEmailInput.value.trim() : '';
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!candidateEmail || !emailPattern.test(candidateEmail)) {
-        if (cardSurveyEmail) {
-          cardSurveyEmail.classList.add('border-rose-400', 'bg-rose-50/20');
-          cardSurveyEmail.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (candidateEmail) {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(candidateEmail)) {
+          if (cardSurveyEmail) {
+            cardSurveyEmail.classList.add('border-rose-400', 'bg-rose-50/20');
+            cardSurveyEmail.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+          if (surveyEmailError) surveyEmailError.classList.remove('hidden');
+          if (surveyEmailInput) surveyEmailInput.focus();
+          return;
         }
-        if (surveyEmailError) surveyEmailError.classList.remove('hidden');
-        if (surveyEmailInput) surveyEmailInput.focus();
-        return;
       }
 
-      // Scoring Calculations
+      // Scoring Calculations:
+      // Preliminary Q0: True (+1 baseline digital fatigue / conscious recognition of burnout)
+      // Q1: A (+2), B (0), C (+3)
+      // Q2: A (+3), B (+1), C (0)
+      // Q4: A (0), B (+1), C (+2)
+      // Q5: True (+2), False (0)
+      // Q10: Yes (+2), No (0)
+      // Q11: Yes (+2), No (0)
+      // Q12: A (0), B (+3), C (+2)
       let dependenceRaw = 0;
+      if (answers.q0 === 'True') dependenceRaw += 1;
       if (answers.q1 === 'A') dependenceRaw += 2;
       if (answers.q1 === 'C') dependenceRaw += 3;
 
@@ -1428,99 +1569,123 @@
       if (answers.q12 === 'B') dependenceRaw += 3;
       if (answers.q12 === 'C') dependenceRaw += 2;
 
-      const dependencePercent = Math.min(100, Math.round((dependenceRaw / 17) * 100));
+      const dependencePercent = Math.min(100, Math.round((dependenceRaw / 18) * 100));
 
+      // 2. Distress / Boredom Tolerance:
+      // High tolerance markers:
+      // Q1: B (+2)
+      // Q8: Yes (curiosity over panic) (+3)
+      // Q9: Yes (embracing discomfort) (+3)
+      // Q7: False (regular flow states) (+2)
       let toleranceRaw = 0;
       if (answers.q1 === 'B') toleranceRaw += 2;
       if (answers.q8 === 'Yes') toleranceRaw += 3;
       if (answers.q9 === 'Yes') toleranceRaw += 3;
       if (answers.q7 === 'False') toleranceRaw += 2;
 
+      // 3. Learning Rate / Habit Elasticity:
       let learningRate = "";
       if (answers.q3 === 'A') learningRate = "Hyper-Elastic (1-2 Cycles)";
       else if (answers.q3 === 'B') learningRate = "Standard Receptive (5-15 Cycles)";
       else learningRate = "Compulsive Persistence (100+ Cycles)";
 
+      // Candidate Profile Determination
       let badgeColor = "";
       let badgeText = "";
       let feedback = "";
 
+      const hasDigitalFatigue = answers.q0 === 'True';
+      const fatigueContext = hasDigitalFatigue 
+        ? " Having repeatedly contemplated deleting social media platforms confirms active metacognitive awareness of digital saturation, indicating strong fertile ground for lasting intervention."
+        : " Without previous impulses to purge social platforms, device friction must be framed around cognitive focus and emotional clarity rather than total severance.";
+
       if (dependencePercent >= 55 && answers.q9 === 'Yes') {
         badgeColor = "bg-emerald-100 text-emerald-800 border border-emerald-300";
         badgeText = "Tier 1: Prime Candidate (High Impact)";
-        feedback = "This candidate exhibits clear dopaminergic over-reliance and automated smartphone reflexes, but crucially retains strong intellectual curiosity and high discomfort tolerance (affirmed in Q8/Q9). They are primed to absorb the neurobiology concepts rapidly and turn clinical insights into lasting behavioral changes during your interactive presentation.";
+        feedback = `This candidate exhibits clear dopaminergic over-reliance and automated smartphone reflexes, but crucially retains strong intellectual curiosity and high discomfort tolerance (affirmed in Q8/Q9).${fatigueContext} They are primed to absorb neurobiology concepts rapidly and translate clinical insights into lasting behavioral changes during your interactive presentation.`;
       } else if (dependencePercent >= 60 && answers.q9 === 'No') {
         badgeColor = "bg-amber-100 text-amber-800 border border-amber-300";
         badgeText = "Tier 2: High Need / Emotional Resistance";
-        feedback = "This candidate reports severe digital tethering and uses devices heavily as an emotional sedative (Q11). Because their tolerance for voluntary discomfort is currently low, the presentation should place heavy emphasis on micro-steps, grayscale transitions, and reframing friction as neurochemical renewal rather than deprivation.";
+        feedback = `This candidate reports severe digital tethering and uses devices heavily as an emotional sedative (Q11). Because their tolerance for voluntary discomfort is currently low, the presentation should emphasize micro-habits, grayscale transitions, and reframing friction as neurochemical renewal rather than deprivation.${fatigueContext}`;
       } else if (dependencePercent < 35) {
         badgeColor = "bg-blue-100 text-blue-800 border border-blue-300";
         badgeText = "Tier 3: Baseline Resilient / Low Urgency";
-        feedback = "This candidate demonstrates enviable offline engagement and deliberate device boundaries (regular flow states, comfortable checkout waiting). While they may find the presentation fascinating from a theoretical neurobiology standpoint, their immediate personal clinical need for behavioral rehabilitation is low.";
+        feedback = `This candidate demonstrates enviable offline engagement and deliberate device boundaries (regular flow states, comfortable checkout waiting). While they will find the presentation fascinating from a theoretical neurobiology standpoint, their immediate clinical urgency for behavioral rehabilitation is low.`;
       } else {
         badgeColor = "bg-indigo-100 text-indigo-800 border border-indigo-300";
         badgeText = "Tier 2: Receptive Practitioner";
-        feedback = "This candidate represents the typical modern adult experiencing moderate attention fragmentation and reflex loops. They will benefit significantly from tactile exercises, notification hygiene protocols, and your lockbox dopamine reset frameworks.";
+        feedback = `This candidate represents the typical modern adult experiencing moderate attention fragmentation and automated reflex loops.${fatigueContext} They will benefit significantly from tactile exercises, notification hygiene protocols, and dopamine reset frameworks.`;
       }
 
       const toleranceStr = toleranceRaw >= 6 ? "High (Resilient)" : (toleranceRaw >= 3 ? "Moderate" : "Low (Avoidant)");
 
-      // Render Diagnostic Metrics in UI
+      // Populate UI
       document.getElementById('scoreDependence').textContent = `${dependencePercent}%`;
       document.getElementById('scoreTolerance').textContent = toleranceStr;
       document.getElementById('scoreLearning').textContent = learningRate;
 
       const badgeEl = document.getElementById('candidateBadge');
-      badgeEl.className = `px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${badgeColor}`;
-      badgeEl.textContent = badgeText;
-
-      document.getElementById('candidateFeedback').textContent = feedback;
-
-      const confirmedEmailEl = document.getElementById('confirmed-survey-email');
-      if (confirmedEmailEl) confirmedEmailEl.textContent = candidateEmail;
-
-      // Compile detailed survey_results payload for Google Sheet
-      const answersList = [];
-      for (let i = 1; i <= totalQuestions; i++) {
-        answersList.push(`Q${i}:${answers['q' + i]}`);
-      }
-      const structuredResults = `${badgeText} | Digital Dependence: ${dependencePercent}% | Discomfort Tolerance: ${toleranceStr} | Learning Rate: ${learningRate} | Answers: [${answersList.join(', ')}]`;
-
-      const surveyResultsInput = document.getElementById('survey-results-input');
-      if (surveyResultsInput) {
-        surveyResultsInput.value = structuredResults;
+      if (badgeEl) {
+        badgeEl.className = `px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${badgeColor}`;
+        badgeEl.textContent = badgeText;
       }
 
-      // Submit Form to Google Sheet Web App URL in real time
-      const surveyFormEl = document.getElementById('surveyForm');
-      if (surveyFormEl) {
-        try {
-          surveyFormEl.target = 'google_sheet_target';
-          HTMLFormElement.prototype.submit.call(surveyFormEl);
-        } catch (submitErr) {
+      const candidateFeedbackEl = document.getElementById('candidateFeedback');
+      if (candidateFeedbackEl) {
+        candidateFeedbackEl.textContent = feedback;
+      }
+
+      // If email provided, record to Google Sheet
+      if (candidateEmail) {
+        const confirmedEmailEl = document.getElementById('confirmed-survey-email');
+        if (confirmedEmailEl) confirmedEmailEl.textContent = candidateEmail;
+
+        const submittedBanner = document.getElementById('survey-submitted-banner');
+        if (submittedBanner) submittedBanner.classList.remove('hidden');
+
+        // Compile detailed survey_results payload for Google Sheet
+        const answersList = [];
+        for (const qKey of questionKeys) {
+          answersList.push(`${qKey.toUpperCase()}:${answers[qKey]}`);
+        }
+        const structuredResults = `${badgeText} | Digital Dependence: ${dependencePercent}% | Discomfort Tolerance: ${toleranceStr} | Learning Rate: ${learningRate} | Answers: [${answersList.join(', ')}]`;
+
+        const surveyResultsInput = document.getElementById('survey-results-input');
+        if (surveyResultsInput) {
+          surveyResultsInput.value = structuredResults;
+        }
+
+        const surveyFormEl = document.getElementById('surveyForm');
+        if (surveyFormEl) {
           try {
-            const formData = new FormData(surveyFormEl);
-            const params = new URLSearchParams();
-            for (const [k, v] of formData.entries()) params.append(k, v);
-            fetch(surveyFormEl.action, {
-              method: 'POST',
-              mode: 'no-cors',
-              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-              body: params.toString()
-            });
-          } catch (fetchErr) {
-            console.warn('Survey submission fetch fallback error:', fetchErr);
+            surveyFormEl.target = 'google_sheet_target';
+            HTMLFormElement.prototype.submit.call(surveyFormEl);
+          } catch (submitErr) {
+            try {
+              const formData = new FormData(surveyFormEl);
+              const params = new URLSearchParams();
+              for (const [k, v] of formData.entries()) params.append(k, v);
+              fetch(surveyFormEl.action, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: params.toString()
+              });
+            } catch (fetchErr) {
+              console.warn('Survey submission fetch fallback error:', fetchErr);
+            }
           }
         }
+      } else {
+        const submittedBanner = document.getElementById('survey-submitted-banner');
+        if (submittedBanner) submittedBanner.classList.add('hidden');
       }
 
-      // Update submit button appearance
-      const submitLabel = document.getElementById('survey-submit-label');
-      if (submitLabel) submitLabel.textContent = "✓ Assessment Submitted to Google Sheet";
-
       const modal = document.getElementById('resultsModal');
-      modal.classList.remove('hidden');
-      modal.scrollIntoView({ behavior: 'smooth' });
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.scrollIntoView({ behavior: 'smooth' });
+      }
     }
 
     // Attach submit event listener to surveyForm
@@ -1532,20 +1697,38 @@
       });
     }
 
-    function resetSurvey() {
-      if (confirm('Are you sure you want to reset all answers?')) {
-        document.getElementById('surveyForm').reset();
-        for (let i = 1; i <= totalQuestions; i++) {
-          const card = document.getElementById(`card-q${i}`);
-          if (card) card.classList.remove('border-rose-400', 'bg-rose-50/20');
-        }
-        if (cardSurveyEmail) cardSurveyEmail.classList.remove('border-rose-400', 'bg-rose-50/20');
-        if (surveyEmailError) surveyEmailError.classList.add('hidden');
-        const submitLabel = document.getElementById('survey-submit-label');
-        if (submitLabel) submitLabel.textContent = "Submit Assessment & Calculate Profile";
-        document.getElementById('resultsModal').classList.add('hidden');
-        onAnswerChange();
+    function requestResetSurvey() {
+      const modal = document.getElementById('confirmResetModal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
       }
+    }
+
+    function closeResetModal() {
+      const modal = document.getElementById('confirmResetModal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    function executeResetSurvey() {
+      closeResetModal();
+      const formEl = document.getElementById('surveyForm');
+      if (formEl) formEl.reset();
+      for (const qKey of questionKeys) {
+        const card = document.getElementById(`card-${qKey}`);
+        if (card) card.classList.remove('border-rose-400', 'bg-rose-50/20');
+      }
+      if (cardSurveyEmail) cardSurveyEmail.classList.remove('border-rose-400', 'bg-rose-50/20');
+      if (surveyEmailInput) surveyEmailInput.value = '';
+      if (surveyEmailError) surveyEmailError.classList.add('hidden');
+      const submittedBanner = document.getElementById('survey-submitted-banner');
+      if (submittedBanner) submittedBanner.classList.add('hidden');
+      const resultsModalEl = document.getElementById('resultsModal');
+      if (resultsModalEl) resultsModalEl.classList.add('hidden');
+      onAnswerChange();
     }
 
     let isCleanView = false;
